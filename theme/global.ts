@@ -8,7 +8,7 @@ const Colors = {
         'secondary-color': '#336699',
     },
     dark: {
-        'bg-default': '#00000',
+        'bg-default': '#000',
         'fg-default': '#F9F9F9',
         'fg-muted': '#A4A4A4',
         'primary-color': '#FF6666',
@@ -36,6 +36,14 @@ const semanticTokens = {
         },
         'secondary-color': {
             default: Colors.light["secondary-color"],
+            _dark: Colors.dark["secondary-color"],
+        },
+        'nav-link-color': {
+            default: Colors.light["secondary-color"],
+            _dark: Colors.dark["primary-color"],
+        },
+        'nav-link-number-color': {
+            default: Colors.light["primary-color"],
             _dark: Colors.dark["secondary-color"],
         }
     }
