@@ -36,7 +36,8 @@ function NavBarDesktop() {
         top={'0px'}
         w={'100%'}
         zIndex={1000}
-        backgroundColor={'bg-default'}>
+        backgroundColor={'bg-default'}
+        className={'Nav-Bar-Desktop'}>
             <Image src={'images/Logo.svg'} transform={'scale(1.5)'} />
             <HStack gap={'24px'}>
                 <Link as={NextLink} href={'/'} variant={'nav-link'}>
@@ -73,7 +74,8 @@ function NavBarMobile() {
             w={'100%'}
             backgroundColor={'bg-default'}
             h={'4rem'}
-            zIndex={1000}>
+            zIndex={1000}
+            className={'Nav-Bar-Mobile'}>
                 <Button 
                 variant={'unstyled'} 
                 ml={'8px'}
@@ -100,7 +102,9 @@ function NavBarMobile() {
             direction={'column'}
             gap={'25px'}
             pt={'16px'}
-            alignItems={'center'}>
+            alignItems={'center'}
+            zIndex={1000}
+            className={'Nav-Bar-Mobile-Menu'}>
                 <Link as={NextLink} href={'/'} variant={'nav-link'}>
                     <chakra.span color={'nav-link-number-color'}>1.</chakra.span> Home
                 </Link>

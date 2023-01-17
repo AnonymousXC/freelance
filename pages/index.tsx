@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import HomeSection from '../components/Home Section';
+import WorkSection from '../components/Work Section';
 
 const NavBar = dynamic(() => import('../components/Navigation Bar'), {ssr: false})
+const HomeSection = dynamic(() => import('../components/Home Section'),{ssr: false})
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <NavBar />
       <HomeSection />
+      <WorkSection />
     </>
   )
 }

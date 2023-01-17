@@ -4,22 +4,26 @@ import {
     Heading,
     Text,
     Button,
+    useMediaQuery,
 } from '@chakra-ui/react';
+import Photo from '../components/Photo frame';
 
 function HomeSection() {
+
+    const [ isMobile ] = useMediaQuery('(max-width: 830px)', {ssr: false})
+
     return (
         <Flex
         w={'100%'}
-        h={'calc(var(--height) - 5rem)'}
-        top={'5rem'}
+        h={isMobile ? 'calc(var(--height) - 4rem)' : 'calc(var(--height) - 5rem)'}
+        marginTop={isMobile ? '4rem' : '5rem'}
         justifyContent={'center'}
         alignItems={'center'}
-        position={'relative'}>
+        position={'relative'}
+        className={'Home-Section'}>
             <Flex gap={'100px'}>
-                <Box w={'254px'} h={'254px'}>
-                    Photo
-                </Box>
-                <Flex direction={'column'}>
+                <Photo  display={isMobile === true ? 'none' : 'block'} />
+                <Flex direction={'column'} pl={isMobile === true ? '16px' : '0px'}>
                     <Heading variant={'h3'} mb={'26px'}>Hi 👋, I'm Thearcane</Heading>
                     <Heading variant={'h1'}>Freelance Full Stack Web Developer</Heading>
                     <Text variant={'muted'}>“good code makes the world a better place.”</Text>

@@ -7,6 +7,13 @@ const Heading = {
             color: 'fg-default',
             lineHeight: '54px',
         },
+        'h2': {
+            fontWeight: '700',
+            fontSize: '1.75rem',
+            fontFamily: 'Spartan',
+            color: 'fg-default',
+            lineHeight: 'auto',
+        },
         'h3': {
             fontWeight: '600',
             fontSize: '1.625rem',
