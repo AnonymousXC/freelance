@@ -5,6 +5,7 @@ const Text = {
         },
         'muted': {
             color: 'fg-muted',
+            fontSize: '1.25rem',
         }
     }
 }

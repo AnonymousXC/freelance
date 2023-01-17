@@ -6,6 +6,7 @@ const Colors = {
         'fg-muted': '#6E6D7A',
         'primary-color': '#FF6666',
         'secondary-color': '#336699',
+        'complementary': '#dddddd',
     },
     dark: {
         'bg-default': '#000',
@@ -13,6 +14,7 @@ const Colors = {
         'fg-muted': '#A4A4A4',
         'primary-color': '#FF6666',
         'secondary-color': '#336699',
+        'complementary': '#161616',
     }
 }
 
@@ -23,7 +25,7 @@ const semanticTokens = {
             _dark: Colors.dark["bg-default"],
         },
         'fg-default': {
-            default: Colors.light["bg-default"],
+            default: Colors.light["fg-default"],
             _dark: Colors.dark["fg-default"],
         },
         'fg-muted': {
@@ -45,6 +47,10 @@ const semanticTokens = {
         'nav-link-number-color': {
             default: Colors.light["primary-color"],
             _dark: Colors.dark["secondary-color"],
+        },
+        'nav-mobile-menu-bg': {
+            default: Colors.light.complementary,
+            _dark: Colors.dark.complementary,
         }
     }
 }
