@@ -20,6 +20,13 @@ const Heading = {
             fontFamily: 'Spartan',
             color: 'fg-default',
             lineHeight: '36px',
+        },
+        'h4': {
+            fontWeight: '600',
+            fontSize: '1.5rem',
+            fontFamily: 'Spartan',
+            color: 'fg-default',
+            lineHeight: 'auto',
         }
     }
 }

@@ -4,6 +4,7 @@ const Colors = {
         'bg-default': '#FFFFFF',
         'fg-default': '#212126',
         'fg-muted': '#6E6D7A',
+        'fg-muted-L': '#212126',
         'primary-color': '#FF6666',
         'secondary-color': '#336699',
         'complementary': '#dddddd',
@@ -12,6 +13,7 @@ const Colors = {
         'bg-default': '#000',
         'fg-default': '#F9F9F9',
         'fg-muted': '#A4A4A4',
+        'fg-muted-L': '#DEDEDE',
         'primary-color': '#FF6666',
         'secondary-color': '#336699',
         'complementary': '#161616',
@@ -31,6 +33,10 @@ const semanticTokens = {
         'fg-muted': {
             default: Colors.light["fg-muted"],
             _dark: Colors.dark["fg-muted"],
+        },
+        'fg-muted-L': {
+            default: Colors.light["fg-muted-L"],
+            _dark: Colors.dark["fg-muted-L"],
         },
         'primary-color': {
             default: Colors.light["primary-color"],
