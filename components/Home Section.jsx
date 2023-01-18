@@ -10,7 +10,7 @@ import Photo from '../components/Photo frame';
 
 function HomeSection() {
 
-    const [ isMobile ] = useMediaQuery('(max-width: 830px)', {ssr: false})
+    const [ isMobile ] = useMediaQuery('(max-width: 830px)')
 
     return (
         <Flex

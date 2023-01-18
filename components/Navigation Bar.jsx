@@ -16,7 +16,7 @@ import { Close } from '@styled-icons/material-rounded/Close';
 import { useState } from 'react';
 
 function NavBar() {
-    const [ isMobile ] = useMediaQuery('(max-width: 830px)', {ssr: false})
+    const [ isMobile ] = useMediaQuery('(max-width: 830px)')
     if(isMobile === false)
         return <NavBarDesktop />
     else
