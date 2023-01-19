@@ -20,7 +20,8 @@ function WorkSection() {
         left={'50%'} 
         px={'12px'}
         transform={'translateX(-50%)'}
-        mb={'180px'}>
+        mb={'180px'}
+        id={'Work-Section'}>
             <Heading variant={'h2'}>
                 What I do
             </Heading>

@@ -4,19 +4,23 @@ const Colors = {
         'bg-default': '#FFFFFF',
         'fg-default': '#212126',
         'fg-muted': '#6E6D7A',
-        'fg-muted-L': '#212126',
+        'fg-muted-2': '#212126',
+        'txt-s': '#6E6D7A',
         'primary-color': '#FF6666',
         'secondary-color': '#336699',
         'complementary': '#dddddd',
+        'input-bg': '#DEDEDE',
     },
     dark: {
         'bg-default': '#000',
         'fg-default': '#F9F9F9',
         'fg-muted': '#A4A4A4',
-        'fg-muted-L': '#DEDEDE',
+        'fg-muted-2': '#DEDEDE',
+        'txt-s': '#6E6D7A',
         'primary-color': '#FF6666',
         'secondary-color': '#336699',
         'complementary': '#161616',
+        'input-bg': '#212126',
     }
 }
 
@@ -34,9 +38,13 @@ const semanticTokens = {
             default: Colors.light["fg-muted"],
             _dark: Colors.dark["fg-muted"],
         },
-        'fg-muted-L': {
-            default: Colors.light["fg-muted-L"],
-            _dark: Colors.dark["fg-muted-L"],
+        'fg-muted-2': {
+            default: Colors.light["fg-muted-2"],
+            _dark: Colors.dark["fg-muted-2"],
+        },
+        'txt-s': {
+            default: Colors.light["txt-s"],
+            _dark: Colors.dark["txt-s"],
         },
         'primary-color': {
             default: Colors.light["primary-color"],
@@ -57,6 +65,10 @@ const semanticTokens = {
         'nav-mobile-menu-bg': {
             default: Colors.light.complementary,
             _dark: Colors.dark.complementary,
+        },
+        'input-bg': {
+            default: Colors.light["input-bg"],
+            _dark: Colors.dark["input-bg"],
         }
     }
 }

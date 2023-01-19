@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import NavBar from '../components/Navigation Bar';
-import HomeSection from '../components/Home Section';
-import WorkSection from '../components/Work Section';
+import NavBar from '@/components/Navigation Bar';
+import HomeSection from '@/components/Home Section';
+import WorkSection from '@/components/Work Section';
 import AboutSection from '@/components/About Section';
+import ContactSection from '@/components/Contact Section';
 import FindWorkSection from '../components/Find Work Section';
 
 
@@ -26,6 +27,7 @@ export default function Home() {
       <HomeSection />
       <WorkSection />
       <AboutSection />
+      <ContactSection />
     </>
   )
 }

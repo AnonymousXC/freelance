@@ -6,6 +6,7 @@ import {
     Button,
     useColorMode,
     Flex,
+    Text,
     useMediaQuery,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -14,6 +15,7 @@ import { LightMode } from '@styled-icons/material-rounded/LightMode';
 import { Menu } from '@styled-icons/material-rounded/Menu';
 import { Close } from '@styled-icons/material-rounded/Close';
 import { useState } from 'react';
+import * as Scroll from 'react-scroll';
 
 function NavBar() {
     const [ isMobile ] = useMediaQuery('(max-width: 830px)')
@@ -40,18 +42,26 @@ function NavBarDesktop() {
         className={'Nav-Bar-Desktop'}>
             <Image src={'images/Logo.svg'} transform={'scale(1.5)'} />
             <HStack gap={'24px'}>
-                <Link as={NextLink} href={'/'} variant={'nav-link'}>
-                    <chakra.span color={'nav-link-number-color'}>1.</chakra.span> Home
-                </Link>
-                <Link as={NextLink} href={'/'} variant={'nav-link'}>
-                    <chakra.span color={'nav-link-number-color'}>2.</chakra.span> Work
-                </Link>
-                <Link as={NextLink} href={'/'} variant={'nav-link'}>
-                    <chakra.span color={'nav-link-number-color'}>3.</chakra.span> About
-                </Link>
-                <Link as={NextLink} href={'/'} variant={'nav-link'}>
-                    <chakra.span color={'nav-link-number-color'}>4.</chakra.span> Contact
-                </Link>
+                <Scroll.Link to={'Home-Section'} smooth={'easeInCubic'} ignoreCancelEvents={true}>
+                    <Text variant={'nav-link'}>
+                        <chakra.span color={'nav-link-number-color'}>1.</chakra.span> Home
+                    </Text>
+                </Scroll.Link>
+                <Scroll.Link to={'Work-Section'} smooth={'easeInCubic'} offset={-100} ignoreCancelEvents={true}>
+                    <Text variant={'nav-link'}>
+                        <chakra.span color={'nav-link-number-color'}>2.</chakra.span> Work
+                    </Text>
+                </Scroll.Link>
+                <Scroll.Link to={'About-Section'} smooth={'easeInCubic'} offset={-100} ignoreCancelEvents={true}>
+                    <Text variant={'nav-link'}>
+                        <chakra.span color={'nav-link-number-color'}>3.</chakra.span> About
+                    </Text>
+                </Scroll.Link>
+                <Scroll.Link to={'Contact-Section'} smooth={'easeInCubic'} offset={-100} ignoreCancelEvents={true}>
+                    <Text variant={'nav-link'}>
+                        <chakra.span color={'nav-link-number-color'}>4.</chakra.span> Contact
+                    </Text>
+                </Scroll.Link>
                 <Button variant={'unstyled'} onClick={toggleColorMode} transform={'translateY(-2px)'}>
                     {colorMode === 'dark' ? <LightMode size={'30px'} /> : <DarkMode size={'30px'}/>}
                 </Button>
@@ -64,6 +74,10 @@ function NavBarMobile() {
     
     const { colorMode, toggleColorMode} = useColorMode()
     const [ sideBar, setSideBar ] = useState(false)
+
+    Scroll.Events.scrollEvent.register('begin', (to, ele) => {
+        setSideBar(false)
+    })
 
     return (
         <>
@@ -105,18 +119,26 @@ function NavBarMobile() {
             alignItems={'center'}
             zIndex={1000}
             className={'Nav-Bar-Mobile-Menu'}>
-                <Link as={NextLink} href={'/'} variant={'nav-link'}>
-                    <chakra.span color={'nav-link-number-color'}>1.</chakra.span> Home
-                </Link>
-                <Link as={NextLink} href={'/'} variant={'nav-link'}>
-                    <chakra.span color={'nav-link-number-color'}>2.</chakra.span> Work
-                </Link>
-                <Link as={NextLink} href={'/'} variant={'nav-link'}>
-                    <chakra.span color={'nav-link-number-color'}>3.</chakra.span> About
-                </Link>
-                <Link as={NextLink} href={'/'} variant={'nav-link'}>
-                    <chakra.span color={'nav-link-number-color'}>4.</chakra.span> Contact
-                </Link>
+                <Scroll.Link to={'Home-Section'} smooth={'easeInCubic'} ignoreCancelEvents={true}>
+                    <Text variant={'nav-link'}>
+                        <chakra.span color={'nav-link-number-color'}>1.</chakra.span> Home
+                    </Text>
+                </Scroll.Link>
+                <Scroll.Link to={'Work-Section'} smooth={'easeInCubic'} offset={-80} ignoreCancelEvents={true}>
+                    <Text variant={'nav-link'}>
+                        <chakra.span color={'nav-link-number-color'}>2.</chakra.span> Work
+                    </Text>
+                </Scroll.Link>
+                <Scroll.Link to={'About-Section'} smooth={'easeInCubic'} offset={-80} ignoreCancelEvents={true}>
+                    <Text variant={'nav-link'}>
+                        <chakra.span color={'nav-link-number-color'}>3.</chakra.span> About
+                    </Text>
+                </Scroll.Link>
+                <Scroll.Link to={'Contact-Section'} smooth={'easeInCubic'} offset={-80} ignoreCancelEvents={true}>
+                    <Text variant={'nav-link'}>
+                        <chakra.span color={'nav-link-number-color'}>4.</chakra.span> Contact
+                    </Text>
+                </Scroll.Link>
             </Flex>
         </>
     )

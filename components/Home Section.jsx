@@ -20,7 +20,7 @@ function HomeSection() {
         justifyContent={'center'}
         alignItems={'center'}
         position={'relative'}
-        className={'Home-Section'}>
+        id={'Home-Section'}>
             <Flex gap={'100px'}>
                 <Photo  display={isMobile === true ? 'none' : 'block'} />
                 <Flex direction={'column'} pl={isMobile === true ? '16px' : '0px'}>

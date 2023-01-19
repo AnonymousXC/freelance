@@ -15,6 +15,7 @@
     "@fontsource/hind": "^4.5.10",
     "@fontsource/spartan": "^4.5.8",
     "@next/font": "13.1.2",
+    "@styled-icons/entypo-social": "^10.46.0",
     "@styled-icons/material-rounded": "^10.47.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
@@ -25,6 +26,7 @@
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-scroll": "^1.8.9",
     "typescript": "4.9.4"
   }
 }

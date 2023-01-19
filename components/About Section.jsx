@@ -16,20 +16,22 @@ function AboutSection() {
         px={'12px'}
         transform={'translateX(-50%)'}
         direction={'column'}
-        gap={'48px'}>
+        gap={'48px'}
+        mb={'180px'}
+        id={'About-Section'}>
             <Heading variant={'h2'} mb={'22px'}>About 👨‍💼 Me</Heading>
             <Flex direction={'column'} gap={'32px'} maxW={'700px'}>
-                <Text variant={'muted'}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequuntur aspernatur praesentium velit rerum unde dolorem, cumque necessitatibus voluptatum error illum totam nihil doloremque?
+                <Text variant={'muted-2'}>
+                    I started as a game development in school, and later I founded DevStudio alone. As a founder, I learned a lot about managing a company, team, and projects. I also learned App Development and Full Stack Web Development.
                 </Text>
-                <Text variant={'muted'}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat minima magni, magnam earum officia cum velit debitis quisquam sed veniam amet, perferendis, architecto ducimus ullam quia iusto dicta? Ipsum, quisquam? architecto ducimus ullam quia iusto dicta? Ipsum, quisquam? quia iusto dicta? Ipsum, quisquam? 
+                <Text variant={'muted-2'}>
+                    And in less than a year, I found my passion for coding. Now, I’m selling digital goods on the web and working on freelance projects. I love helping small businesses to create their online presence and help setting up their own online store (e-commerce) to boost their business. 
                 </Text>
-                <Text variant={'muted'}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia itaque ullam voluptatibus ea dolor, incidunt quam quibusdam veniam accusamus ducimus error obcaecati sed blanditiis autem velit nemo ratione in quos! blanditiis autem velit nemo ratione in quos!
+                <Text variant={'muted-2'}>
+                    My code ensures that it is developer-friendly as it passes through the lens of my experience as a app developer. When I code, I make sure it is 100% readable and understood by other developers. I document the whole code with comments for better understanding.
                 </Text>
             </Flex>
-            <Flex> <Favorite size={'23px'} fill={'red'} /> <Text variant={'muted'}>I love <chakra.span color={'nav-link-number-color'}>good design</chakra.span>, gaming, art, netflix, and gadgets.</Text> </Flex>
+            <Flex gap={'23px'}> <Favorite size={'26px'} fill={'red'} /> <Text variant={'muted'}>I love <chakra.span color={'nav-link-number-color'}>good code</chakra.span>, technology, problem solving, youtube, and gadgets.</Text> </Flex>
         </Flex>
     )
 }
