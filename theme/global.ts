@@ -10,6 +10,7 @@ const Colors = {
         'secondary-color': '#336699',
         'complementary': '#dddddd',
         'input-bg': '#DEDEDE',
+        'footer-bg': '#F9F9F9',
     },
     dark: {
         'bg-default': '#000',
@@ -21,6 +22,7 @@ const Colors = {
         'secondary-color': '#336699',
         'complementary': '#161616',
         'input-bg': '#212126',
+        'footer-bg': '#111113'
     }
 }
 
@@ -69,6 +71,10 @@ const semanticTokens = {
         'input-bg': {
             default: Colors.light["input-bg"],
             _dark: Colors.dark["input-bg"],
+        },
+        'footer-bg': {
+            default: Colors.light["footer-bg"],
+            _dark: Colors.dark["footer-bg"],
         }
     }
 }

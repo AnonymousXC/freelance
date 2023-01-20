@@ -5,7 +5,7 @@ import HomeSection from '@/components/Home Section';
 import WorkSection from '@/components/Work Section';
 import AboutSection from '@/components/About Section';
 import ContactSection from '@/components/Contact Section';
-import FindWorkSection from '../components/Find Work Section';
+import Footer from '../components/Footer';
 
 
 export default function Home() {
@@ -28,6 +28,7 @@ export default function Home() {
       <WorkSection />
       <AboutSection />
       <ContactSection />
+      <Footer />
     </>
   )
 }
