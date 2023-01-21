@@ -31,7 +31,7 @@ function AboutSection() {
                     My code ensures that it is developer-friendly as it passes through the lens of my experience as a app developer. When I code, I make sure it is 100% readable and understood by other developers. I document the whole code with comments for better understanding.
                 </Text>
             </Flex>
-            <Flex gap={'23px'}> <Favorite size={'26px'} fill={'red'} /> <Text variant={'muted'}>I love <chakra.span color={'nav-link-number-color'}>good code</chakra.span>, technology, problem solving, youtube, and gadgets.</Text> </Flex>
+            <Flex gap={'23px'}> <Favorite size={'23px'} fill={'red'} /> <Text variant={'muted'}>I love <chakra.span color={'nav-link-number-color'}>good code</chakra.span>, technology, problem solving, youtube, and gadgets.</Text> </Flex>
         </Flex>
     )
 }

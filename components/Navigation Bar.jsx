@@ -9,7 +9,6 @@ import {
     Text,
     useMediaQuery,
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import { DarkMode } from '@styled-icons/material-rounded/DarkMode';
 import { LightMode } from '@styled-icons/material-rounded/LightMode';
 import { Menu } from '@styled-icons/material-rounded/Menu';

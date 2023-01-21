@@ -8,9 +8,12 @@ const Button = {
             color: '#000000',
             fontSize: '1.2rem',
             fontWeight: '600',
-            height: '48px',
+            height: 'min-content',
+            paddingTop: '10px',
+            paddingBottom: '10px',
             paddingLeft: '19px',
             paddingRight: '19px',
+            lineHeight: 'auto',
             _hover: {
                 transform: 'scale(1.1)'
             }
@@ -20,9 +23,12 @@ const Button = {
             color: '#ffffff',
             fontSize: '1.2rem',
             fontWeight: '600',
-            height: '48px',
+            height: 'min-content',
+            paddingTop: '10px',
+            paddingBottom: '10px',
             paddingLeft: '19px',
             paddingRight: '19px',
+            lineHeight: 'auto',
             _hover: {
                 transform: 'scale(1.1)'
             }

@@ -4,15 +4,14 @@ import Button from "./components/Button";
 import Text from "./components/Text";
 import Link from "./components/Link";
 import Heading from "./components/Heading";
-import Input from "./components/Input";
-
+import Textarea from "./components/Textarea";
 
 const components = {
-    Input,
     Button,
     Text,
     Link,
     Heading,
+    Textarea,
 };
 
 const fonts = {
