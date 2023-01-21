@@ -7,6 +7,7 @@ import {
     Button,
     useMediaQuery,
 } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
 
 function WorkSection() {
 
@@ -51,6 +52,7 @@ function WorkSection() {
 
 
 function Card({imagePath, heading, content}) {
+    const router = useRouter()
     return (
         <Flex 
         direction={'column'}
@@ -60,7 +62,10 @@ function Card({imagePath, heading, content}) {
             <Image src={imagePath} w={'55px'} h={'55px'} />
             <Heading variant={'h4'}>{heading}</Heading>
             <Text variant={'muted'}>{content}</Text>
-            <Button variant={'btn-muted'}>Get an estimate</Button>
+            <Button variant={'btn-muted'} 
+            onClick={() => {
+                router.push('/estimate', undefined, { shallow: true })
+            }}>Get an estimate</Button>
         </Flex>
     )
 }
