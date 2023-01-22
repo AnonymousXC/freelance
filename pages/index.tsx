@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 
 
 export default function Home() {
+  // hope it works
 
   useEffect(() => {
     document.documentElement.style.setProperty('--height', `${window.innerHeight}px`)
