@@ -45,16 +45,16 @@ function ContactSection() {
                 <Box>
                     <Text variant={'txt-s'} mt={'8px'}>Follow</Text>
                     <HStack mt={'16px'}>
-                        <Link as={NextLink} variant={'unstyled'} href={'/'} _hover={{transform: 'scale(1.1)'}}>
+                        <Link as={NextLink} variant={'unstyled'} href={'https://twitter.com/nthearcane'} target={'_blank'} _hover={{transform: 'scale(1.1)'}}>
                             <TwitterWithCircle size={'38px'} fill={'var(--chakra-colors-secondary-color)'} />
                         </Link>
-                        <Link as={NextLink} variant={'unstyled'} href={'/'} _hover={{transform: 'scale(1.1)'}}>
+                        <Link as={NextLink} variant={'unstyled'} href={'https://www.linkedin.com/in/thearcane/'} target={'_blank'} _hover={{transform: 'scale(1.1)'}}>
                             <LinkedinWithCircle size={'38px'} fill={'var(--chakra-colors-secondary-color)'} />
                         </Link>
-                        <Link as={NextLink} variant={'unstyled'} href={'/'} _hover={{transform: 'scale(1.1)'}}>
+                        <Link as={NextLink} variant={'unstyled'} href={'https://github.com/AnonymousXC'} target={'_blank'} _hover={{transform: 'scale(1.1)'}}>
                             <GithubWithCircle size={'38px'} fill={'var(--chakra-colors-secondary-color)'} />
                         </Link>
-                        <Link as={NextLink} variant={'unstyled'} href={'/'} _hover={{transform: 'scale(1.1)'}}>
+                        <Link as={NextLink} variant={'unstyled'} href={'https://www.instagram.com/nthearcane/'} target={'_blank'} _hover={{transform: 'scale(1.1)'}}>
                             <InstagramWithCircle size={'38px'} fill={'var(--chakra-colors-secondary-color)'} />
                         </Link>
                     </HStack>
