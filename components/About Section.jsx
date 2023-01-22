@@ -87,7 +87,6 @@ function AboutSection() {
                     </Flex>
                 </Stack>
             </Flex>
-            <Flex gap={'23px'}> <Favorite size={'23px'} fill={'red'} /> <Text variant={'muted'}>I love <chakra.span color={'nav-link-number-color'}>good code</chakra.span>, technology, problem solving, youtube, and gadgets.</Text> </Flex>
         </Flex>
     )
 }
