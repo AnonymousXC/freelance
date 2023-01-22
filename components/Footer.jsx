@@ -3,9 +3,11 @@ import {
     HStack,
     Image,
     Text,
+    Link,
     chakra,
     useMediaQuery,
 } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 function Footer() {
 
@@ -26,7 +28,11 @@ function Footer() {
             </HStack>
             <Text variant={'muted'} align={'end'} display={smallerThan560 ? 'none' : 'block'}>
                 Designed using Figma <br />
-                Hosted on <chakra.span color={'secondary-color'}>Vercel</chakra.span>
+                Hosted on 
+                <chakra.span> </chakra.span>
+                <Link as={NextLink} href={'https://vercel.com/anonymousxc'} target={'_blank'} variant={'unstyled'} _hover={{textDecoration: 'underline', textDecorationColor: 'nav-link-color', textUnderlineOffset: '5px'}}>
+                    <chakra.span color={'nav-link-number-color'}>Vercel</chakra.span>
+                </Link>
             </Text>
         </Flex>
     )
