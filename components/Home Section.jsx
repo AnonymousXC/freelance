@@ -38,6 +38,7 @@ function HomeSection() {
                             </Scroll.Link>
                         </Button>
                         <Button variant={'primary'} isLoading={isContactLoading}
+                        _hover={{transform: 'scale(1.1)'}}
                         onClick={(e) => {
                             setContactLoading(true)
                             router.push('/contact', undefined, {shallow: true})

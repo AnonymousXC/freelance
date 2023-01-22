@@ -47,7 +47,7 @@ function ContactSection() {
                 <Text variant={'muted-2'}>I am always open to discuss your project, improve your website or help with coding challenges. </Text>
                 <Box>
                     <Text variant={'txt-s'} mb={'16px'} mt={'8px'}>📧 Email me at</Text>
-                    <Text variant={'muted-2'}>cvxanonymous007@gmail.com</Text>
+                    <Text variant={'muted-2'}>nthearcane@outlook.com</Text>
                 </Box>
                 <Box>
                     <Text variant={'txt-s'} mt={'8px'}>Follow</Text>
@@ -69,10 +69,10 @@ function ContactSection() {
             </Stack>
             <Stack maxW={'500px'} w={'100%'} gap={'64px'} flex={'1'} flexBasis={'0'}>
                 <Stack gap={'32px'}>
-                    <InputComponent placeholder={'Your name*'} onChange={(e) => {setSelfName(e.currentTarget.value)}} />
-                    <InputComponent placeholder={'Your email*'} onChange={(e) => {setFromName(e.currentTarget.value)}} />
-                    <InputComponent placeholder={'Your website(if exists)'} onChange={(e) => {setWebsiteUrl(e.currentTarget.value)}} />
-                    <Textarea variant={'contact'} placeholder={'How can i help?*'} minH={'140px'} onChange={(e) => {setMessage(e.currentTarget.value)}} />
+                        <InputComponent placeholder={'Your name*'} onChange={(e) => {setSelfName(e.currentTarget.value)}} name={'user-name'} />
+                        <InputComponent placeholder={'Your email*'} onChange={(e) => {setFromName(e.currentTarget.value)}} type={'email'} name={'user-email'} />
+                        <InputComponent placeholder={'Your website(if exists)'} onChange={(e) => {setWebsiteUrl(e.currentTarget.value)}} />
+                        <Textarea variant={'contact'} placeholder={'How can i help?*'} minH={'140px'} onChange={(e) => {setMessage(e.currentTarget.value)}} name={'user-msg'} />
                 </Stack>
                 <Button 
                 variant={'primary'} 
@@ -80,9 +80,11 @@ function ContactSection() {
                 py={'12px'} 
                 alignSelf={'flex-end'} 
                 mr={'35px'}
+                type={'submit'}
                 _hover={{transform: 'scale(1.1)'}}
                 isLoading={isEmailSendLoading}
                 onClick={() => {
+                    if(isFormValid() === false) return;
                     setEmailSendLoading(true)
                     const templateParams = {
                         self_name: `${self_name}`,
@@ -90,6 +92,7 @@ function ContactSection() {
                         user_message: `${message}`,
                         website_url: `${websiteUrl}`
                     }
+                    sendEmailUser(templateParams)
                     sendEmailSelf(templateParams, setEmailSendLoading)
                 }}>Get In <br /> Touch</Button>
             </Stack>
@@ -106,7 +109,46 @@ function sendEmailSelf(templateParams, setEmailSendLoading) {
        alert('Email not send. Please Retry.')
        setEmailSendLoading(false)
     });
+}
 
+function sendEmailUser(templateParams) {
+    emailjs.send('service_qax18nh', 'template_zvkqxza', templateParams, 'cHZojKbc8rC9mZPd4')
+    .then(function(response) {
+
+    }, function(error) {
+
+    });
+
+}
+
+function isFormValid() {
+    let userName = document.getElementsByName('user-name')[0].value.trim()
+    let userEmail = document.getElementsByName('user-email')[0].value.trim()
+    let userMsg = document.getElementsByName('user-msg')[0].value.trim()
+    if(!userName || userName === ' ' || userName === '')
+    {
+        alert('Enter username.')
+        return false
+    }
+    else if(!userEmail || userEmail === ' ' || userEmail === '')
+    {
+        alert('Enter email.')
+        return false
+    }
+    else if(!userMsg || userMsg === ' ' || userMsg === '')
+    {
+        alert('Enter message.')
+        return false
+    }
+    else if(/.*\@.+\..+/.test(userEmail) === false)
+    {
+        alert('Enter valid email')
+        return false
+    }
+    else
+    {
+        return true;
+    }
 }
 
 export default ContactSection;
