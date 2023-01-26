@@ -33,7 +33,7 @@ import { Git } from '@styled-icons/icomoon/Git';
 function AboutSection() {
 
     const { colorMode } = useColorMode()
-    const [ isSmallerThan930 ] = useMediaQuery('(max-width: 920px)');
+    const [ isSmallerThan930 ] = useMediaQuery('(max-width: 920px)', {ssr: false});
 
     return (
         <Flex

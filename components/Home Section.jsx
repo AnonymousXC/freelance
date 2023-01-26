@@ -12,7 +12,7 @@ import { useState } from 'react';
 
 function HomeSection() {
 
-    const [ isMobile ] = useMediaQuery('(max-width: 830px)')
+    const [ isMobile ] = useMediaQuery('(max-width: 830px)', {ssr: false})
     const [ isContactLoading, setContactLoading ] = useState(false)
     const router = useRouter()
 

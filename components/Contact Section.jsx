@@ -21,7 +21,7 @@ import { useState } from 'react';
 
 function ContactSection() {
 
-    const [ isSmallerThan320 ] = useMediaQuery('(max-width: 770px)');
+    const [ isSmallerThan320 ] = useMediaQuery('(max-width: 770px)', {ssr: false});
     const [ self_name, setSelfName ] = useState('')
     const [ from_name, setFromName ] = useState('')
     const [ message, setMessage ] = useState('')

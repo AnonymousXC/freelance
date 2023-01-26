@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 
 function WorkSection() {
 
-    const [ smallerThan850 ] = useMediaQuery('(max-width: 850px)')
+    const [ smallerThan850 ] = useMediaQuery('(max-width: 850px)', {ssr: false})
 
     return (
         <Box 

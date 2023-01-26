@@ -11,8 +11,8 @@ import NextLink from 'next/link';
 
 function Footer() {
 
-    const [ smallerThan770 ] = useMediaQuery('(max-width: 770px)');
-    const [ smallerThan560 ] = useMediaQuery('(max-width: 560px)');
+    const [ smallerThan770 ] = useMediaQuery('(max-width: 770px)', {ssr: false});
+    const [ smallerThan560 ] = useMediaQuery('(max-width: 560px)', {ssr: false});
 
     return (
         <Flex

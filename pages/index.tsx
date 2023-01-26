@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import NavBar from '@/components/Navigation Bar';
-import HomeSection from '@/components/Home Section';
-import WorkSection from '@/components/Work Section';
-import AboutSection from '@/components/About Section';
-import ContactSection from '@/components/Contact Section';
-import Footer from '../components/Footer';
+import dynamic from 'next/dynamic';
+
+const NavBar = dynamic(() => import('@/components/Navigation Bar'), { ssr: false})
+const HomeSection = dynamic(() => import('@/components/Home Section'), {ssr: false})
+const WorkSection = dynamic(() => import('@/components/Work Section'), {ssr: false})
+const AboutSection = dynamic(() => import('@/components/About Section'), {ssr: false})
+const ContactSection = dynamic(() => import('@/components/Contact Section'), {ssr: false})
+const Footer = dynamic(() => import('@/components/Footer'), {ssr: false})
+
 
 
 export default function Home() {
-  // hope it works
 
   useEffect(() => {
     document.documentElement.style.setProperty('--height', `${window.innerHeight}px`)

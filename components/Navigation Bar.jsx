@@ -17,7 +17,7 @@ import { useState } from 'react';
 import * as Scroll from 'react-scroll';
 
 function NavBar() {
-    const [ isMobile ] = useMediaQuery('(max-width: 830px)')
+    const [ isMobile ] = useMediaQuery('(max-width: 830px)', {ssr: false})
     if(isMobile === false)
         return <NavBarDesktop />
     else
